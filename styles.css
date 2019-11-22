@@ -35,18 +35,22 @@ ul {
   border: none;
 }
 
-/******** GLOBAL STYLES ********/
-.header {
-  /* align-self: flex-start; */
-  margin-right: 167px;
+.page-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
 }
+
+/******** GLOBAL STYLES ********/
+/* .header {
+  align-self: flex-start;
+} */
 
 h1 {
   font-family: 'Poppins', sans-serif;
 }
 
 /******** FOR MOBILE FIRST DESIGN ********/
-@media(max-width: 767px) {
+@media(min-width: 360px) {
   body {
     background-image: url("images/bg-mobile.svg");
     background-position: top;
@@ -56,20 +60,28 @@ h1 {
   }
 
   .header-img {
-    height: 31px;
+    width: 125px;
   }
 
   .hero-section {
+    align-self: center;
+    justify-self: center;
     margin-top: 50px;
   }
 
   .hero-img {
-    width: 292px;
+    width: 100%;
   }
 
   .mission-statement {
+    display: grid;
     margin-top: 52px;
     text-align: center;
+  }
+
+  .statement-wrapper {
+    justify-self: center;
+    width: 282px;
   }
 
   .mission-statement h1 {
@@ -128,6 +140,28 @@ h1 {
 
   .footer p {
     margin-top: 20px;
+  }
+}
+
+@media(min-width: 576px) {
+  .statement-wrapper {
+
+    width: 362px;
+  }
+
+  .header-img {
+    width: 150px;
+  }
+}
+
+@media(min-width: 768px) {
+  .statement-wrapper {
+
+    width: 492px;
+  }
+
+  .header-img {
+    width: 200px;
   }
 }
 
