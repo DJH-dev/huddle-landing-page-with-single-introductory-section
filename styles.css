@@ -37,7 +37,8 @@ ul {
 
 /******** GLOBAL STYLES ********/
 .header {
-  align-self: flex-start;
+  /* align-self: flex-start; */
+  margin-right: 167px;
 }
 
 h1 {
