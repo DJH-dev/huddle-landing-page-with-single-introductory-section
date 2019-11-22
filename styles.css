@@ -41,10 +41,6 @@ ul {
 }
 
 /******** GLOBAL STYLES ********/
-/* .header {
-  align-self: flex-start;
-} */
-
 h1 {
   font-family: 'Poppins', sans-serif;
 }
@@ -61,6 +57,7 @@ h1 {
 
   .header-img {
     width: 125px;
+    transition: width 500ms;
   }
 
   .hero-section {
@@ -82,6 +79,7 @@ h1 {
   .statement-wrapper {
     justify-self: center;
     width: 282px;
+    transition: width 500ms;
   }
 
   .mission-statement h1 {
@@ -145,7 +143,6 @@ h1 {
 
 @media(min-width: 576px) {
   .statement-wrapper {
-
     width: 362px;
   }
 
@@ -155,8 +152,11 @@ h1 {
 }
 
 @media(min-width: 768px) {
-  .statement-wrapper {
+  body {
+    background-size: cover;
+  }
 
+  .statement-wrapper {
     width: 492px;
   }
 
@@ -165,5 +165,58 @@ h1 {
   }
 }
 
-/******** FOR TABLET and DESKTOP SCREENS ********/
-@media(min-width: 768px) {}
+/******** DESKTOP SCREENS ********/
+@media(min-width: 992px) {
+  body {
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    padding: 25px 0 0;
+  }
+
+  .page-container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    width: 95%;
+  }
+
+  .header {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .hero-section {
+    justify-self: stretch;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .mission-statement {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-content: start;
+    text-align: left;
+  }
+
+  .statement-wrapper{
+    width: 505px;
+    margin-top: 38px;
+  }
+
+  .mission-statement h1 {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    width: 412px;
+  }
+
+  .mission-statement p {
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+  }
+
+  .footer {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
