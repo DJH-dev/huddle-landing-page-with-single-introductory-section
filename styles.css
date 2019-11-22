@@ -1,0 +1,134 @@
+/*********** GLOBAL STYLES ***********/
+* {
+  box-sizing: border-box;
+}
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+html {
+  font-size: 16px;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* body defaults */
+body {
+  align-items: center;
+  background-color: #674BB1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* global resets */
+html,
+body,
+h1,
+h2,
+p,
+button,
+ul {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/******** GLOBAL STYLES ********/
+.header {
+  align-self: flex-start;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/******** FOR MOBILE FIRST DESIGN ********/
+@media(max-width: 767px) {
+  body {
+    background-image: url("images/bg-mobile.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 25px 38px 0;
+  }
+
+  .header-img {
+    height: 31px;
+  }
+
+  .hero-section {
+    margin-top: 50px;
+  }
+
+  .hero-img {
+    width: 292px;
+  }
+
+  .mission-statement {
+    margin-top: 52px;
+    text-align: center;
+  }
+
+  .mission-statement h1 {
+    color: #FFFFFF;
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 2.1rem;
+    letter-spacing: .02rem;
+  }
+
+  .mission-statement p {
+    color: #FFFFFF;
+    line-height: 1.4rem;
+    margin-top: 18px;
+    font-size: .93rem;
+    font-weight: 400;
+  }
+
+  .action-button,
+  .action-button:visited {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 10px 0 rgba(0, 0, 0, 0.40);
+    border-radius: 20px;
+    height: 39px;
+    margin-top: 28px;
+    transition: background-color 150ms;
+    transition: box-shadow 100ms;
+    width: 192px;
+  }
+
+  .action-button:hover {
+    box-shadow: none;
+    background-color: #bfbfbf;
+    cursor: pointer;
+  }
+
+  .footer {
+    margin: 50px 0 0;
+  }
+
+  .social-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .social-list li:nth-child(2) {
+    margin: 0 12px;
+  }
+
+  .social-link {
+    color: #FFFFFF;
+    height: 1.8rem;
+  }
+
+  .footer p {
+    margin-top: 20px;
+  }
+}
+
+/******** FOR TABLET and DESKTOP SCREENS ********/
+@media(min-width: 768px) {}
