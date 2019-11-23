@@ -79,7 +79,6 @@ h1 {
   .statement-wrapper {
     justify-self: center;
     width: 282px;
-    transition: width 500ms;
   }
 
   .mission-statement h1 {
@@ -103,6 +102,7 @@ h1 {
     background-color: #FFFFFF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 10px 0 rgba(0, 0, 0, 0.40);
     border-radius: 20px;
+    color: #6E5F99;
     height: 39px;
     margin-top: 28px;
     transition: background-color 150ms;
@@ -157,7 +157,26 @@ h1 {
   }
 
   .statement-wrapper {
-    width: 492px;
+    width: 612px;
+  }
+
+  .mission-statement h1 {
+    font-size: 1.8rem;
+  }
+
+  .mission-statement p {
+    line-height: 1.4rem;
+    font-size: 1rem;
+  }
+
+  .action-button {
+    border-radius: 40px;
+    font-size: 1rem;
+    height: 50px;
+  }
+
+  .social-link {
+    height: 2.2rem;
   }
 
   .header-img {
@@ -166,7 +185,7 @@ h1 {
 }
 
 /******** DESKTOP SCREENS ********/
-@media(min-width: 992px) {
+@media(min-width: 1216px) {
   body {
     background-image: url("images/bg-desktop.svg");
     background-size: cover;
@@ -177,11 +196,14 @@ h1 {
     display: grid;
     grid-column-gap: 50px;
     grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: minmax(589px,auto) auto;
+    height: inherit;
+    overflow: auto;
     width: 95%;
   }
 
   .header {
+    align-self: end;
     grid-column: 1/2;
     grid-row: 1/2;
   }
@@ -190,6 +212,7 @@ h1 {
     justify-self: stretch;
     grid-column: 1/2;
     grid-row: 2/3;
+    margin-top: 7%;
   }
 
   .mission-statement {
@@ -199,8 +222,8 @@ h1 {
     text-align: left;
   }
 
-  .statement-wrapper{
-    width: 505px;
+  .statement-wrapper {
+    width: 512px;
     margin-top: 38px;
   }
 
@@ -215,8 +238,17 @@ h1 {
     line-height: 1.6rem;
   }
 
+
+
   .footer {
-    grid-column: 2/3;
+    align-self: flex-end;
+    display: grid;
+    grid-column: 1/3;
     grid-row: 3/4;
+  }
+
+  .social-list {
+    justify-self: end;
+    margin-right: 52px;
   }
 }
